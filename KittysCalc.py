@@ -1,5 +1,6 @@
 from cgitb import text
 from tkinter import*
+from PIL import ImageTk
 
 from include import source
 
@@ -22,7 +23,7 @@ class app(Frame):
         self.master.title('Kitty Calculator')
 
         display = StringVar()
-        Entry(self, relief=RIDGE,
+        Entry(self, relief=FLAT,
               textvariable=display, justify='right', bd=30, bg="pink").pack(side=TOP, expand=YES, fill=BOTH)
 
         for clearBut in (["CE"],["C"]):
